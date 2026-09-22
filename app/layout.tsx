@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
-export const metadata: Metadata = {title:'Juwa Afterdark — Game Worlds & Stories',description:'Explore Juwa game artwork, colorful characters, and original blog stories in the Afterdark collection, with an interactive 3D reel-and-dice scene.',icons:{icon:'/favicon.svg',shortcut:'/favicon.svg'}};
-export default function RootLayout({children}:{children:React.ReactNode}){return <html lang="en"><body>{children}</body></html>}
+import {SiteHeader,SiteFooter,SocialDock} from './site-shell';
+import {pageMeta,origin,jsonLd} from './seo';
+export const metadata: Metadata = {...pageMeta('Juwa777 Game Worlds & Blog | JUWA3X','Explore Juwa777 game categories, full cover artwork and source-based stories on JUWA3X, an independent editorial blog. 18+.','/'),metadataBase:new URL(origin),icons:{icon:'/favicon.svg',shortcut:'/favicon.svg'}};
+export default function RootLayout({children}:{children:React.ReactNode}){return <html lang="en"><body><a className="skip-link" href="#main-content">Skip to content</a><SiteHeader/><div id="main-content">{children}</div><SiteFooter/><SocialDock/><script type="application/ld+json" dangerouslySetInnerHTML={{__html:jsonLd({'@context':'https://schema.org','@type':'WebSite',name:'JUWA3X',url:origin,description:'Independent editorial blog about Juwa777 game categories and artwork.'})}}/></body></html>}
 
