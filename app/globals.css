@@ -44,3 +44,4 @@ html{scroll-padding-top:150px}.site-top{position:sticky;top:0;z-index:50;padding
 
 /* Supplied JUWA3X brand artwork, shown in full. */
 .header .brand img{width:150px;height:auto;object-fit:contain}@media(max-width:700px){.header .brand img{width:104px}}@media(max-width:350px){.header .brand img{width:85px}}
+.header-actions{display:flex;align-items:center;gap:8px;margin-left:auto;flex-shrink:0}
