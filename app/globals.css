@@ -47,3 +47,54 @@ html{scroll-padding-top:150px}.site-top{position:sticky;top:0;z-index:50;padding
 .header-actions{display:flex;align-items:center;gap:8px;margin-left:auto;flex-shrink:0}
 .header a.header-link,.header a.header-link:hover,.header a.header-link:focus-visible{color:#251204}
 .header a.header-link:hover,.header a.header-link:focus-visible{background:linear-gradient(115deg,#ffe09a,#e8a12e);box-shadow:0 8px 22px #faad3247;transform:translateY(-1px)}
+.journal-slider{margin-top:6px}
+.journal-toolbar{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:14px}
+.journal-toolbar p{margin:0;color:var(--muted);font-size:13px;letter-spacing:.3px}
+.journal-toolbar>div{display:flex;gap:8px}
+.journal-toolbar button{width:42px;height:42px;border-radius:10px;background:#24182f;border:1px solid #e3b96755;color:var(--gold);display:grid;place-items:center}
+.journal-toolbar button:disabled{opacity:.35;cursor:default}
+.journal-track{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;-webkit-overflow-scrolling:touch;padding:2px 2px 8px}
+.journal-track:focus-visible{outline-offset:4px}
+.journal-track::-webkit-scrollbar{display:none}
+.journal-slide{flex:0 0 calc((100% - 36px) / 3);scroll-snap-align:start;min-width:0}
+.journal-slider .story{height:100%;display:flex;flex-direction:column}
+.journal-slider .story:hover{transform:none}
+.journal-slider .story-image{aspect-ratio:1.85;flex:none}
+.journal-slider .story-copy{display:flex;flex-direction:column;flex:1;padding:0 20px 20px}
+.journal-slider .story-copy .eyebrow{margin:16px 0 10px}
+.journal-slider .story-copy h3{font-size:20px;line-height:1.25;min-height:2.5em;margin-bottom:10px;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.journal-slider .story-copy>p:not(.eyebrow){font-size:14px;line-height:1.55;max-width:none;margin-bottom:14px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.journal-slider .read-link{margin-top:auto}
+.journal-dots{display:flex;justify-content:center;gap:8px;margin-top:14px;flex-wrap:wrap}
+.journal-dots button{width:9px;height:9px;padding:0;border-radius:99px;background:#ffffff33}
+.journal-dots button.on{width:26px;background:var(--gold)}
+.hero h1{margin-bottom:10px}
+.hero-kicker{margin:0 0 16px;font-family:'Manrope',sans-serif;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#ffc755;font-size:13px}
+.display-sub{margin:-6px 0 16px;font-family:'Manrope',sans-serif;font-weight:800;font-size:clamp(26px,3vw,40px);letter-spacing:-1px;line-height:1.12}
+.display-sub em{color:#ffc755;font-style:normal}
+.guide-links,.article-guides{display:flex;flex-wrap:wrap;gap:10px 16px}
+.guide-links{margin:16px 0 8px;max-width:560px}
+.guide-links a,.article-guides a{color:#ffdc8e;font-size:14px;border-bottom:1px solid #785a43;padding-bottom:3px}
+.article-guides{margin:8px 0 28px}
+.about a{color:#ffdc8e}
+footer>div{flex-wrap:wrap}
+.trivia-overlay{position:fixed;inset:0;z-index:90;display:grid;place-items:center;padding:20px;background:#100a18d6}
+.trivia-dialog{position:relative;width:min(520px,100%);max-height:min(88vh,760px);overflow:auto;background:#1b1226;border:1px solid #e3b96755;border-radius:18px;padding:28px 22px 22px}
+.trivia-dialog h2{font-size:clamp(26px,4vw,34px);letter-spacing:-1px;line-height:1.15;margin:8px 36px 12px 0}
+.trivia-dialog p{line-height:1.6;color:#d9cfe2}
+.trivia-close{position:absolute;top:12px;right:12px;width:36px;height:36px;display:grid;place-items:center;border-radius:50%;background:#2a1c33;color:#ffd46c}
+.trivia-progress{margin:0 0 6px;color:#ffd46c;font-size:13px;letter-spacing:.4px}
+.trivia-prompt{font-size:18px;color:#fff6e7}
+.trivia-options{display:flex;flex-direction:column;gap:10px;margin:16px 0}
+.trivia-options button{display:flex;gap:10px;align-items:flex-start;text-align:left;background:#27182f;border:1px solid #52335b;border-radius:12px;padding:12px 14px;line-height:1.4}
+.trivia-letter{flex:none;width:18px;color:#ffd46c;font-weight:700}
+.trivia-options button.right{border-color:#d7b56a;color:#ffd46c}
+.trivia-options button.wrong{border-color:#c45b5b}
+.trivia-note{font-size:13px;color:#b5a5bf}
+.trivia-expire{margin:0 0 8px;color:#ffd46c;font-size:13px}
+.trivia-links{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:14px}
+.trivia-back{background:transparent;color:#ffd46c;padding:8px 0}
+.trivia-dialog a{color:#ffd46c;text-decoration:underline}
+@media(max-width:1100px){.journal-slide{flex-basis:calc((100% - 18px) / 2)}}
+@media(max-width:700px){.journal-slide{flex-basis:86%}.journal-toolbar p{font-size:12px}.journal-slider .story-copy h3{font-size:22px;min-height:0}.collection,.journal{padding-bottom:36px}}
+@media(prefers-reduced-motion:reduce){.journal-track{scroll-behavior:auto}.journal-slider .story{transition:none}}
