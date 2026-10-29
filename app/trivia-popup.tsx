@@ -20,7 +20,7 @@ const questions = [
   },
   {
     prompt: 'How many Juwa777 game covers are on juwa3x.com?',
-    choices: ['42 covers', '10 covers', '200 covers'],
+    choices: ['57 covers', '10 covers', '200 covers'],
     answer: 0,
   },
   {
